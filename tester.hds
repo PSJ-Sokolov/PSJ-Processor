@@ -1,0 +1,18 @@
+# hades.models.Design file
+#  
+[name] tester
+[components]
+hades.models.io.Ipin OVERFLOW_BIT_IN 26400 12600 @N 1001 null U
+hades.models.gates.Xor2 i1 42000 10800 @N 1001 1.0E-8
+hades.models.rtlib.io.Expander i0 30600 9600 @N 1001 4 1.0E-8
+hades.models.io.Ipin ZERO_BIT_IN 26400 15000 @N 1001 null U
+hades.models.rtlib.io.IpinVector CONDITION 30000 9000 @N 1001 4 UUUU_B 1.0E-9 0
+hades.models.io.Opin TEST_SUCCEEDS 48000 18000 @N 1001 5.0E-9
+hades.models.io.Ipin NEGATIVE_BIT_IN 26400 11400 @N 1001 null U
+hades.models.io.Ipin CARRY_BIT_IN 26400 13800 @N 1001 null U
+[end components]
+[signals]
+hades.signals.SignalStdLogic1164 n1 2 i0 Y0 i1 A 2 2 33000 10800 33000 11400 2 33000 11400 42000 11400 0 
+hades.signals.SignalStdLogicVector n0 4 2 CONDITION Y i0 A 2 2 30000 9000 31200 9000 2 31200 9000 31200 9600 0 
+[end signals]
+[end]

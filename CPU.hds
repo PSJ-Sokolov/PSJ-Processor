@@ -1,0 +1,32 @@
+# hades.models.Design file
+#  
+[name] RUN1819_CPU
+[components]
+hades.models.Design timer -1200 -600 @N 1001 ./timer.hds
+hades.models.Design registerbank 13200 -3600 @N 1001 ./registerbank.hds
+hades.models.Design instruction_decoder1 5400 -2400 @N 1001 ./instructiondecoder.hds
+hades.models.rtlib.io.OpinVector DATABUS_OUT -7800 -1800 @N 1001 32 1.0E-9 0
+hades.models.rtlib.io.IpinVector DATABUS_IN -3000 -3000 @N 1001 32 UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU_B 1.0E-9 0
+hades.models.io.Opin nRE 10800 12000 @N 1001 5.0E-9
+hades.models.io.Opin nWE 21000 12600 @N 1001 5.0E-9
+hades.models.Design Flag_Registerbank 28200 -3000 @N 1001 ./flagregisterbank.hds
+hades.models.io.Opin HALTED 19800 -6600 @N 1001 5.0E-9
+hades.models.rtlib.io.OpinVector ADDRESSBUS 7800 -6000 @N 1001 32 1.0E-9 1
+hades.models.Design tester 34200 -4200 @N 1001 ./tester.hds
+hades.models.io.Ipin CLOCK -6600 6600 @N 1001 null U
+hades.models.Design ALU 21000 -3600 @N 1001 ./ALU.hds
+hades.models.io.Ipin nRESET -6600 7800 @N 1001 null U
+[end components]
+[signals]
+hades.signals.SignalStdLogic1164 n9 2 ALU ZERO Flag_Registerbank ZERO_IN 1 2 25800 -600 28200 -600 0 
+hades.signals.SignalStdLogic1164 n8 2 ALU CARRY Flag_Registerbank CARRY_IN 1 2 25800 -1200 28200 -1200 0 
+hades.signals.SignalStdLogic1164 n7 2 ALU NEGATIVE Flag_Registerbank NEGATIVE_IN 1 2 25800 -1800 28200 -1800 0 
+hades.signals.SignalStdLogic1164 n6 2 ALU OVERFLOW Flag_Registerbank OVERFLOW_IN 1 2 25800 -2400 28200 -2400 0 
+hades.signals.SignalStdLogicVector n5 4 2 instruction_decoder1 ADDR_A registerbank ADDR_A 1 2 10200 -600 13200 -600 0 
+hades.signals.SignalStdLogicVector n4 4 2 instruction_decoder1 ADDR_B registerbank ADDR_B 1 2 10200 -1200 13200 -1200 0 
+hades.signals.SignalStdLogicVector n3 4 2 instruction_decoder1 ADDR_DEST registerbank ADDR_DEST 1 2 10200 -1800 13200 -1800 0 
+hades.signals.SignalStdLogicVector n2 32 2 registerbank REG_A ALU A 1 2 18000 -2400 21000 -2400 0 
+hades.signals.SignalStdLogicVector n1 32 2 registerbank REG_B ALU B 1 2 18000 -3000 21000 -3000 0 
+hades.signals.SignalStdLogicVector n0 32 2 DATABUS_IN Y registerbank DATA 1 2 -3000 -3000 13200 -3000 0 
+[end signals]
+[end]
