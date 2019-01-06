@@ -6,16 +6,16 @@ hades.models.Design timer -1200 -600 @N 1001 ./timer.hds
 hades.models.Design registerbank 13200 -3600 @N 1001 ./registerbank.hds
 hades.models.Design instruction_decoder1 5400 -2400 @N 1001 ./instructiondecoder.hds
 hades.models.rtlib.io.OpinVector DATABUS_OUT -7800 -1800 @N 1001 32 1.0E-9 0
-hades.models.io.Opin nRE 10800 12000 @N 1001 5.0E-9
 hades.models.rtlib.io.IpinVector DATABUS_IN -3000 -3000 @N 1001 32 UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU_B 1.0E-9 0
-hades.models.Design Flag_Registerbank 28200 -3000 @N 1001 ./flagregisterbank.hds
+hades.models.io.Opin nRE 10800 12000 @N 1001 5.0E-9
 hades.models.io.Opin nWE 21000 12600 @N 1001 5.0E-9
-hades.models.rtlib.io.OpinVector ADDRESSBUS 7800 -6000 @N 1001 32 1.0E-9 1
+hades.models.Design Flag_Registerbank 28200 -3000 @N 1001 ./flagregisterbank.hds
 hades.models.io.Opin HALTED 19800 -6600 @N 1001 5.0E-9
+hades.models.rtlib.io.OpinVector ADDRESSBUS 7800 -6000 @N 1001 32 1.0E-9 1
 hades.models.Design tester 34200 -4200 @N 1001 ./tester.hds
-hades.models.io.Ipin CLOCK -6600 6600 @N 1001  U
-hades.models.io.Ipin nRESET -6600 7800 @N 1001  U
+hades.models.io.Ipin CLOCK -6600 6600 @N 1001 null U
 hades.models.Design ALU 21000 -3600 @N 1001 ./ALU.hds
+hades.models.io.Ipin nRESET -6600 7800 @N 1001 null U
 [end components]
 [signals]
 hades.signals.SignalStdLogic1164 n9 2 ALU ZERO Flag_Registerbank ZERO_IN 1 2 25800 -600 28200 -600 0 
