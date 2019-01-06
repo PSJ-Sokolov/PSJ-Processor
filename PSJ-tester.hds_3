@@ -2,17 +2,17 @@
 #  
 [name] tester
 [components]
-hades.models.io.Ipin OVERFLOW_BIT_IN 26400 13200 @N 1001  U
+hades.models.io.Ipin OVERFLOW_BIT_IN 26400 13200 @N 1001 null U
 hades.models.io.Vcc i3 49200 10800 @N 1001
 hades.models.io.Gnd i2 49800 20400 @N 1001
-hades.models.gates.Xor2 i1 55200 10800 @N 1001 1.0E-8
 hades.models.Design MUX8_1 50400 12000 @N 1001 /hades/models/rtl/Mux8_1.hds
-hades.models.io.Ipin ZERO_BIT_IN 26400 16800 @N 1001  U
+hades.models.gates.Xor2 i1 55200 10800 @N 1001 1.0E-8
 hades.models.rtlib.io.Expander i0 34200 9600 @N 1001 4 1.0E-8
-hades.models.rtlib.io.IpinVector CONDITION 30000 9000 @N 1001 4 0000_B 1.0E-9 2
+hades.models.io.Ipin ZERO_BIT_IN 26400 16800 @N 1001 null U
+hades.models.rtlib.io.IpinVector CONDITION 30000 9000 @N 1001 4 1111_B 1.0E-9 2
 hades.models.io.Opin TEST_SUCCEEDS 59400 12000 @N 1001 5.0E-9
-hades.models.io.Ipin NEGATIVE_BIT_IN 26400 14400 @N 1001  U
-hades.models.io.Ipin CARRY_BIT_IN 26400 15600 @N 1001  U
+hades.models.io.Ipin NEGATIVE_BIT_IN 26400 14400 @N 1001 null U
+hades.models.io.Ipin CARRY_BIT_IN 26400 15600 @N 1001 null U
 [end components]
 [signals]
 hades.signals.SignalStdLogic1164 n9 2 NEGATIVE_BIT_IN Y MUX8_1 A2 3 2 27600 14400 27600 15600 2 27600 15600 50400 15600 2 27600 14400 26400 14400 0 
