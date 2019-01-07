@@ -1,0 +1,17 @@
+# hades.models.Design file
+#  
+[name] instruction_decoder
+[components]
+hades.models.rtlib.io.OpinVector ADDR_B 51600 15000 @N 1001 4 1.0E-9 0
+hades.models.rtlib.io.OpinVector ADDR_A 51600 16200 @N 1001 4 1.0E-9 1
+hades.models.rtlib.io.SelectBit Arithmetic_Flag_Bit -10200 -17400 @N 1001 32 31 1.0E-8
+hades.models.rtlib.io.OpinVector ADDR_DEST 51000 13800 @N 1001 4 1.0E-9 0
+hades.models.rtlib.io.OpinVector OPCODE 7200 -4800 @N 1001 3 1.0E-9 0
+hades.models.rtlib.io.Subset Opcode_Selector -2400 -17400 @N 1001 32 30 28 UUU_B 1.0E-8
+hades.models.rtlib.io.OpinVector CONDITION 10800 -9600 @N 1001 4 1.0E-9 0
+hades.models.rtlib.io.IpinVector INSTRUCTION -11400 -18000 @N 1001 32 00000000000000000000000000010100_B 1.0E-9 2
+[end components]
+[signals]
+hades.signals.SignalStdLogicVector n0_0 32 3 INSTRUCTION Y Arithmetic_Flag_Bit A Opcode_Selector A 5 2 -11400 -18000 -10200 -18000 2 -10200 -18000 -10200 -17400 2 -10200 -18000 -4200 -18000 2 -4200 -18000 -2400 -18000 2 -2400 -18000 -2400 -17400 1 -10200 -18000 
+[end signals]
+[end]

@@ -1,0 +1,23 @@
+# hades.models.Design file
+#  
+[name] instruction_decoder
+[components]
+hades.models.rtlib.io.OpinVector ADDR_B 51600 15000 @N 1001 4 1.0E-9 0
+hades.models.rtlib.io.OpinVector ADDR_A 51600 16200 @N 1001 4 1.0E-9 1
+hades.models.rtlib.io.Subset Condition_Selector 16200 -17400 @N 1001 32 3 0 UUUU_B 1.0E-8
+hades.models.rtlib.io.Subset LOADHI_Flag_Bit_Selector 7200 -17400 @N 1001 32 3 0 00000000000000000000000000000000_B 1.0E-8
+hades.models.rtlib.io.OpinVector ADDR_DEST 51000 13800 @N 1001 4 1.0E-9 0
+hades.models.io.Opin i0 -9600 -16200 @N 1001 5.0E-9
+hades.models.rtlib.io.OpinVector OPCODE -1800 -16200 @N 1001 3 1.0E-9 0
+hades.models.rtlib.io.Subset Opcode_Selector -2400 -17400 @N 1001 32 30 28 000_B 1.0E-8
+hades.models.rtlib.io.OpinVector CONDITION 16800 -16200 @N 1001 4 1.0E-9 0
+hades.models.rtlib.io.IpinVector INSTRUCTION -11400 -18000 @N 1001 32 00000000000000000000000000010100_B 1.0E-9 2
+hades.models.rtlib.io.SelectBit Arithmetic_Flag_Bit_Selector -10200 -17400 @N 1001 32 31 1.0E-8
+[end components]
+[signals]
+hades.signals.SignalStdLogicVector n2 4 2 Condition_Selector Y CONDITION A 2 2 16200 -16800 16200 -16200 2 16200 -16200 16800 -16200 0 
+hades.signals.SignalStdLogic1164 n1 2 Arithmetic_Flag_Bit_Selector Y i0 A 2 2 -9600 -16200 -10200 -16200 2 -10200 -16200 -10200 -16800 0 
+hades.signals.SignalStdLogicVector n0_0 32 5 INSTRUCTION Y Arithmetic_Flag_Bit_Selector A Opcode_Selector A Condition_Selector A LOADHI_Flag_Bit_Selector A 9 2 -11400 -18000 -10200 -18000 2 -10200 -18000 -10200 -17400 2 -10200 -18000 -4200 -18000 2 -4200 -18000 -2400 -18000 2 -2400 -18000 -2400 -17400 2 7200 -18000 16200 -18000 2 16200 -18000 16200 -17400 2 -2400 -18000 7200 -18000 2 7200 -18000 7200 -17400 3 -2400 -18000 -10200 -18000 7200 -18000 
+hades.signals.SignalStdLogicVector n0 3 2 Opcode_Selector Y OPCODE A 2 2 -2400 -16800 -2400 -16200 2 -2400 -16200 -1800 -16200 0 
+[end signals]
+[end]

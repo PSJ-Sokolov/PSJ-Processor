@@ -1,0 +1,30 @@
+hades.symbols.BboxRectangle  0 0 4800 6000
+hades.symbols.Rectangle  0 0 4800 6000
+hades.symbols.PortLabel 4650 2550 3 SELECTED_RESULT_OUT
+hades.symbols.PortSymbol 4800 2400 SELECTED_RESULT_OUT
+hades.symbols.PortLabel 4650 1950 3 Bit_28
+hades.symbols.PortSymbol 4800 1800 Bit_28
+hades.symbols.PortLabel 4650 1350 3 Bit_29
+hades.symbols.PortSymbol 4800 1200 Bit_29
+hades.symbols.PortLabel 4650 750 3 Bit_30
+hades.symbols.PortSymbol 4800 600 Bit_30
+hades.symbols.PortLabel 150 5550 OPCODE_INPUT
+hades.symbols.PortSymbol 0 5400 OPCODE_INPUT
+hades.symbols.PortLabel 150 4950 REDUNDANT
+hades.symbols.PortSymbol 0 4800 REDUNDANT
+hades.symbols.PortLabel 150 4350 SUB_INPUT
+hades.symbols.PortSymbol 0 4200 SUB_INPUT
+hades.symbols.PortLabel 150 3750 ADD_INPPUT
+hades.symbols.PortSymbol 0 3600 ADD_INPPUT
+hades.symbols.PortLabel 150 3150 ROL_INPUT
+hades.symbols.PortSymbol 0 3000 ROL_INPUT
+hades.symbols.PortLabel 150 2550 BIC_INPUT
+hades.symbols.PortSymbol 0 2400 BIC_INPUT
+hades.symbols.PortLabel 150 1950 AND_INPUT
+hades.symbols.PortSymbol 0 1800 AND_INPUT
+hades.symbols.PortLabel 150 1350 XOR_INPUT
+hades.symbols.PortSymbol 0 1200 XOR_INPUT
+hades.symbols.PortLabel 150 750 OR_INPUT
+hades.symbols.PortSymbol 0 600 OR_INPUT
+hades.symbols.InstanceLabel 150 5850 OPCODE_RESULT_SELECTOR
+hades.symbols.ClassLabel 150 450 OPCODE_RESULT_SELECTOR
