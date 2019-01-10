@@ -4,13 +4,13 @@
 [components]
 hades.models.rtlib.io.SelectBit LOADHI_Selector 7200 -17400 @N 1001 32 30 1.0E-8
 hades.models.rtlib.io.OpinVector Constant 25500 9300 @N 1001 10 1.0E-9 0
-hades.models.rtlib.io.SelectBit Cst_Check 2400 -8400 @N 1001 32 26 1.0E-8
 hades.models.io.Opin nRead_Enable 21600 -1200 @N 1001 5.0E-9
+hades.models.rtlib.io.SelectBit Cst_Check 2400 -8400 @N 1001 32 26 1.0E-8
 hades.models.rtlib.io.Constant R14_Constant2 21600 2700 @N 1001 10 0000000000_B 1.0E-8
 hades.models.rtlib.muxes.Mux21 i9 -10200 1200 @N 1001 4 UUUU_B 1.0E-8
-hades.models.gates.Nor2 i8 -15000 1200 @N 1001 1.0E-8
 hades.models.rtlib.io.Constant R14_Constant1 31500 -5100 @N 1001 4 0000_B 1.0E-8
-hades.models.rtlib.io.SelectBit 30_bit_selector 24000 -17400 @N 1001 32 0 1.0E-8
+hades.models.gates.Nor2 i8 -15000 1200 @N 1001 1.0E-8
+hades.models.rtlib.io.SelectBit 30_bit_selector 24000 -17400 @N 1001 32 30 1.0E-8
 hades.models.gates.Nand3 Read_Check 12600 -4200 @N 1001 1.0E-8
 hades.models.gates.InvSmall i7 23700 1200 @N 1001 5.0E-9
 hades.models.gates.InvSmall i6 -8400 -6600 @N 1001 5.0E-9
@@ -22,24 +22,24 @@ hades.models.gates.And2 i2 10200 -16800 @N 1001 1.0E-8
 hades.models.gates.InvSmall i1 7800 -16800 @N 1001 5.0E-9
 hades.models.gates.InvSmall i0 -9600 -16800 @N 1001 5.0E-9
 hades.models.io.Opin LOADHI_flag_out 21600 -13800 @N 1001 5.0E-9
-hades.models.gates.InvSmall i16 10800 7500 @N 1001 5.0E-9
 hades.models.io.Opin CONTROL_flag_out 33000 -16200 @N 1001 5.0E-9
+hades.models.gates.InvSmall i16 10800 7500 @N 1001 5.0E-9
 hades.models.gates.Nor3 i15 16500 6300 @N 1001 1.0E-8
-hades.models.rtlib.muxes.Mux21 i14 21000 6300 @N 1001 10 UUUUUUUUUU_B 1.0E-8
 hades.models.rtlib.io.Subset Addr_A_Selector -1800 -600 @N 1001 32 15 12 UUUU_B 1.0E-8
+hades.models.rtlib.muxes.Mux21 i14 21000 6300 @N 1001 10 UUUUUUUUUU_B 1.0E-8
 hades.models.gates.Nor3 i13 -3600 2100 @N 1001 1.0E-8
 hades.models.rtlib.io.SelectBit Pop_Check 14400 -8400 @N 1001 32 28 1.0E-8
 hades.models.rtlib.muxes.Mux21 i12 600 2100 @N 1001 4 UUUU_B 1.0E-8
 hades.models.rtlib.io.OpinVector OPCODE -600 -16200 @N 1001 3 1.0E-9 2
 hades.models.rtlib.muxes.Mux21 i11 27000 -2100 @N 1001 4 UUUU_B 1.0E-8
 hades.models.gates.InvSmall i10 18600 -1800 @N 1001 5.0E-9
-hades.models.rtlib.io.Subset LOADHI_Cst_Selector 31200 -8400 @N 1001 32 29 8 UUUUUUUUUUUUUUUUUUUUUU_B 1.0E-8
 hades.models.rtlib.io.Subset Constant_Selector 14100 -600 @N 1001 32 25 16 UUUUUUUUUU_B 1.0E-8
+hades.models.rtlib.io.Subset LOADHI_Cst_Selector 31200 -8400 @N 1001 32 29 8 UUUUUUUUUUUUUUUUUUUUUU_B 1.0E-8
 hades.models.rtlib.io.OpinVector ADDR_DEST 34800 600 @N 1001 4 1.0E-9 0
 hades.models.rtlib.io.OpinVector CONDITION 36000 -7200 @N 1001 4 1.0E-9 2
 hades.models.rtlib.io.OpinVector LOADHI_Constant 36000 -6000 @N 1001 22 1.0E-9 0
-hades.models.rtlib.io.Subset Addr_B_Selector -9000 -600 @N 1001 32 11 8 UUUU_B 1.0E-8
 hades.models.gates.And2 eq\u003f_\u005b31\u005d_\u0023t 8400 -14400 @N 1001 1.0E-8
+hades.models.rtlib.io.Subset Addr_B_Selector -9000 -600 @N 1001 32 11 8 UUUU_B 1.0E-8
 hades.models.gates.And2 AND_eq\u003f_\u005b31\u005d_\u0023t_eq\u003f_\u005b30\u005d_\u0023f1 15000 -15000 @N 1001 1.0E-8
 hades.models.rtlib.io.SelectBit flag_bit_selector -5400 -8400 @N 1001 32 27 1.0E-8
 hades.models.rtlib.io.Subset Condition_Selector 34800 -8400 @N 1001 32 3 0 UUUU_B 1.0E-8
@@ -47,13 +47,13 @@ hades.models.gates.And2 should_set_flag_bit_be_set\u003f -4200 -7800 @N 1001 1.0
 hades.models.rtlib.io.OpinVector ADDR_B 8400 5700 @N 1001 4 1.0E-9 0
 hades.models.rtlib.io.OpinVector ADDR_A 8400 4500 @N 1001 4 1.0E-9 2
 hades.models.gates.Nor2 Use_Addr_Dest_Check 21600 -4800 @N 1001 1.0E-8
-hades.models.rtlib.io.SelectBit Arithmetic_Flag_Bit_Selector -10200 -17400 @N 1001 32 31 1.0E-8
 hades.models.rtlib.io.Subset Destination_Selector 27600 -8400 @N 1001 32 7 4 UUUU_B 1.0E-8
+hades.models.rtlib.io.SelectBit Arithmetic_Flag_Bit_Selector -10200 -17400 @N 1001 32 31 1.0E-8
 hades.models.io.Opin nWrite_Enable 34800 1800 @N 1001 5.0E-9
 hades.models.rtlib.io.SelectBit 31_bit_selector 16200 -17400 @N 1001 32 31 1.0E-8
 hades.models.io.Opin set_flag_bit 300 -6600 @N 1001 5.0E-9
-hades.models.io.Opin Aritmatic_flag_bit_out -6600 -16200 @N 1001 5.0E-9
 hades.models.rtlib.io.Constant R14_Constant -18000 -5400 @N 1001 4 1110_B 1.0E-8
+hades.models.io.Opin Aritmatic_flag_bit_out -6600 -16200 @N 1001 5.0E-9
 hades.models.rtlib.io.Subset Opcode_Selector -1200 -17400 @N 1001 32 30 28 110_B 1.0E-8
 hades.models.rtlib.io.SelectBit Push_Check 20400 -8400 @N 1001 32 26 1.0E-8
 hades.models.rtlib.io.SelectBit Write_Check 8400 -8400 @N 1001 32 29 1.0E-8
@@ -69,8 +69,8 @@ hades.signals.SignalStdLogicVector n30 4 2 i12 Y ADDR_A A 2 2 2400 3900 2400 450
 hades.signals.SignalStdLogic1164 n17_0 2 Push_Check Y Read_Check A 12 2 20400 -7800 20400 -6600 2 20400 -6600 10800 -6600 2 10800 -6600 10800 -3600 2 10800 -3600 12600 -3600 2 10800 -6600 6000 -6600 2 6000 -6600 6000 -2400 2 -4200 -2400 -15300 -2400 2 -15300 -2400 -15300 1800 2 -15300 1800 -15000 1800 2 6000 -2400 -4200 -2400 2 -4200 -2400 -4200 3300 2 -4200 3300 -3600 3300 2 10800 -6600 -4200 -2400 
 hades.signals.SignalStdLogic1164 n1_1_1_0 4 Arithmetic_Flag_Bit_Selector Y i0 A eq?_[31]_#t A i6 A 9 2 -10200 -16200 -10200 -16800 2 -10200 -16200 -9600 -16200 2 -10200 -16200 -10200 -13800 2 -10200 -13800 8400 -13800 2 -10200 -13800 -10200 -8400 2 -10200 -8400 -10200 -7200 2 -10200 -7200 -10200 -6600 2 -10200 -6600 -10200 -6000 2 -10200 -6000 -8400 -6000 2 -10200 -13800 -10200 -16200 
 hades.signals.SignalStdLogicVector n29 4 2 Addr_A_Selector Y i12 A1 3 2 -1800 0 -1800 1200 2 -1800 1200 1800 1200 2 1800 1200 1800 2100 0 
-hades.signals.SignalStdLogicVector n9_0_1_0_0_1_0_0 32 6 flag_bit_selector A Addr_B_Selector A Addr_A_Selector A Cst_Check A Constant_Selector A LOADHI_Cst_Selector A 42 2 -11400 -18000 -10200 -18000 2 -10200 -18000 -10200 -17400 2 -10200 -18000 -1200 -18000 2 -1200 -18000 -1200 -17400 2 -1200 -18000 7200 -18000 2 7200 -18000 7200 -17400 2 7200 -18000 16200 -18000 2 16200 -18000 16200 -17400 2 16200 -18000 24000 -18000 2 24000 -18000 24000 -17400 2 24000 -18000 37800 -18000 2 37800 -13200 37800 -9000 2 2400 -9000 -5400 -9000 2 -5400 -9000 -5400 -8400 2 31800 -9000 31200 -9000 2 27600 -9000 26400 -9000 2 23400 -9000 22200 -9000 2 26400 -9000 23400 -9000 2 34800 -9000 34200 -9000 2 22200 -9000 20400 -9000 2 20400 -9000 20400 -8400 2 20400 -9000 14400 -9000 2 14400 -9000 14400 -8400 2 14400 -9000 8400 -9000 2 8400 -9000 8400 -8400 2 37800 -9000 34800 -9000 2 34800 -9000 34800 -8400 2 31200 -9000 27600 -9000 2 27600 -9000 27600 -8400 2 -5400 -9000 -11400 -9000 2 -11400 -9000 -11400 -1200 2 -11400 -1200 -9000 -1200 2 -9000 -1200 -9000 -600 2 -9000 -1200 -1800 -1200 2 -1800 -1200 -1800 -600 2 8400 -9000 2400 -9000 2 2400 -9000 2400 -8400 2 -1800 -1200 14100 -1200 2 14100 -1200 14100 -600 2 37800 -18000 37800 -13200 2 34200 -9000 31800 -9000 2 31200 -9000 31200 -8400 15 7200 -18000 27600 -9000 24000 -18000 16200 -18000 -1800 -1200 -10200 -18000 20400 -9000 2400 -9000 31200 -9000 14400 -9000 -5400 -9000 8400 -9000 34800 -9000 -9000 -1200 -1200 -18000 
 hades.signals.SignalStdLogic1164 n28 2 Cst_Check Y i16 A 6 2 2400 -7800 2400 -3600 2 2400 -3600 -4800 -3600 2 -4800 -3600 -4800 3900 2 -4800 3900 -3600 3900 2 -4800 3900 -4800 8100 2 -4800 8100 10800 8100 1 -4800 3900 
+hades.signals.SignalStdLogicVector n9_0_1_0_0_1_0_0 32 6 flag_bit_selector A Addr_B_Selector A Addr_A_Selector A Cst_Check A Constant_Selector A LOADHI_Cst_Selector A 42 2 -11400 -18000 -10200 -18000 2 -10200 -18000 -10200 -17400 2 -10200 -18000 -1200 -18000 2 -1200 -18000 -1200 -17400 2 -1200 -18000 7200 -18000 2 7200 -18000 7200 -17400 2 7200 -18000 16200 -18000 2 16200 -18000 16200 -17400 2 16200 -18000 24000 -18000 2 24000 -18000 24000 -17400 2 24000 -18000 37800 -18000 2 37800 -13200 37800 -9000 2 2400 -9000 -5400 -9000 2 -5400 -9000 -5400 -8400 2 31800 -9000 31200 -9000 2 27600 -9000 26400 -9000 2 23400 -9000 22200 -9000 2 26400 -9000 23400 -9000 2 34800 -9000 34200 -9000 2 22200 -9000 20400 -9000 2 20400 -9000 20400 -8400 2 20400 -9000 14400 -9000 2 14400 -9000 14400 -8400 2 14400 -9000 8400 -9000 2 8400 -9000 8400 -8400 2 37800 -9000 34800 -9000 2 34800 -9000 34800 -8400 2 31200 -9000 27600 -9000 2 27600 -9000 27600 -8400 2 -5400 -9000 -11400 -9000 2 -11400 -9000 -11400 -1200 2 -11400 -1200 -9000 -1200 2 -9000 -1200 -9000 -600 2 -9000 -1200 -1800 -1200 2 -1800 -1200 -1800 -600 2 8400 -9000 2400 -9000 2 2400 -9000 2400 -8400 2 -1800 -1200 14100 -1200 2 14100 -1200 14100 -600 2 37800 -18000 37800 -13200 2 34200 -9000 31800 -9000 2 31200 -9000 31200 -8400 15 7200 -18000 27600 -9000 24000 -18000 16200 -18000 -1800 -1200 -10200 -18000 20400 -9000 2400 -9000 31200 -9000 14400 -9000 -5400 -9000 8400 -9000 34800 -9000 -9000 -1200 -1200 -18000 
 hades.signals.SignalStdLogicVector n27 4 2 i11 Y ADDR_DEST A 2 2 28800 -300 28800 600 2 28800 600 34800 600 0 
 hades.signals.SignalStdLogic1164 n26 2 i10 Y nRead_Enable A 1 2 20400 -1200 21600 -1200 0 
 hades.signals.SignalStdLogicVector n25 4 3 R14_Constant1 Y i11 A0 i12 A0 8 2 33300 -3300 33300 -2700 2 33300 -2700 29400 -2700 2 29400 -2700 29400 -2100 2 29400 -2700 25800 -2700 2 25800 -2700 25800 900 2 23100 900 3000 900 2 3000 900 3000 2100 2 25800 900 23100 900 1 29400 -2700 
@@ -95,8 +95,8 @@ hades.signals.SignalStdLogic1164 n18 3 i7 Y nWrite_Enable A i11 S 4 2 26400 1800
 hades.signals.SignalStdLogic1164 n17 2 i13 Y i12 S 1 2 0 3300 600 3300 0 
 hades.signals.SignalStdLogic1164 n16 2 Use_Addr_Dest_Check Y i4 S 2 2 25800 -3600 26400 -3600 2 25200 -3600 25800 -3600 0 
 hades.signals.SignalStdLogic1164 n15 2 i0 Y Aritmatic_flag_bit_out A 1 2 -7800 -16200 -6600 -16200 0 
-hades.signals.SignalStdLogic1164 n16_0_0 3 Read_Check C i7 A i15 C 12 2 8400 -6600 8400 -3000 2 8400 -7800 8400 -6600 2 8400 -3000 8400 -2400 2 8400 -2400 12600 -2400 2 8400 -2400 8400 1800 2 13800 1800 23700 1800 2 8400 1800 -3900 1800 2 -3900 1800 -3900 2700 2 -3900 2700 -3600 2700 2 8400 1800 13800 1800 2 13800 1800 13800 7500 2 13800 7500 16500 7500 3 13800 1800 8400 -2400 8400 1800 
 hades.signals.SignalStdLogicVector n14 4 2 Condition_Selector Y CONDITION A 2 2 34800 -7800 34800 -7200 2 34800 -7200 36000 -7200 0 
+hades.signals.SignalStdLogic1164 n16_0_0 3 Read_Check C i7 A i15 C 12 2 8400 -6600 8400 -3000 2 8400 -7800 8400 -6600 2 8400 -3000 8400 -2400 2 8400 -2400 12600 -2400 2 8400 -2400 8400 1800 2 13800 1800 23700 1800 2 8400 1800 -3900 1800 2 -3900 1800 -3900 2700 2 -3900 2700 -3600 2700 2 8400 1800 13800 1800 2 13800 1800 13800 7500 2 13800 7500 16500 7500 3 13800 1800 8400 -2400 8400 1800 
 hades.signals.SignalStdLogic1164 n13 2 should_set_flag_bit_be_set? Y set_flag_bit A 1 2 -600 -6600 300 -6600 0 
 hades.signals.SignalStdLogic1164 n12 2 i6 Y should_set_flag_bit_be_set? B 1 2 -6600 -6000 -4200 -6000 0 
 hades.signals.SignalStdLogic1164 n11 2 flag_bit_selector Y should_set_flag_bit_be_set? A 2 2 -5400 -7800 -5400 -7200 2 -5400 -7200 -4200 -7200 0 
