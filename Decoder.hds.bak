@@ -1,0 +1,51 @@
+# hades.models.Design file
+#  
+[name] instruction_decoder
+[components]
+hades.models.rtlib.io.SelectBit flag_bit_selector -5400 -8400 @N 1001 32 27 1.0E-8
+hades.models.io.Opin Aritmatic_flag_bit_out -7200 -16200 @N 1001 5.0E-9
+hades.models.gates.And2 eq\u003f_\u005b31\u005d_\u0023t 8400 -14400 @N 1001 1.0E-8
+hades.models.rtlib.io.OpinVector OPCODE -600 -16200 @N 1001 3 1.0E-9 0
+hades.models.io.Opin set_flag_bit 1800 -6600 @N 1001 5.0E-9
+hades.models.gates.And2 should_set_flag_bit_be_set\u003f -4200 -7800 @N 1001 1.0E-8
+hades.models.rtlib.io.Subset Condition_Selector -16800 -15000 @N 1001 32 3 0 1100_B 1.0E-8
+hades.models.rtlib.io.SelectBit 30_bit_selector 24000 -17400 @N 1001 32 0 1.0E-8
+hades.models.rtlib.io.SelectBit LOADHI_Selector 7200 -17400 @N 1001 32 30 1.0E-8
+hades.models.io.Opin LOADHI_flag_out 19200 -13800 @N 1001 5.0E-9
+hades.models.rtlib.io.OpinVector CONDITION -18000 -22200 @N 1001 4 1.0E-9 0
+hades.models.rtlib.io.Subset Opcode_Selector -1200 -17400 @N 1001 32 30 28 000_B 1.0E-8
+hades.models.rtlib.io.SelectBit Arithmetic_Flag_Bit_Selector -10200 -17400 @N 1001 32 31 1.0E-8
+hades.models.gates.InvSmall i6 -8400 -6600 @N 1001 5.0E-9
+hades.models.rtlib.io.IpinVector INSTRUCTION -11400 -18000 @N 1001 32 10000000000000000000000001101100_B 1.0E-8 2
+hades.models.gates.And2 i5 28200 -17400 @N 1001 1.0E-8
+hades.models.io.Gnd i4 -12600 -14400 @N 1001
+hades.models.io.Opin CONTROL_flag_out 33000 -16200 @N 1001 5.0E-9
+hades.models.rtlib.io.OpinVector ADDR_DEST 51000 13800 @N 1001 4 1.0E-9 0
+hades.models.io.Vcc i3 -12600 -10800 @N 1001
+hades.models.gates.And2 i2 10200 -16800 @N 1001 1.0E-8
+hades.models.rtlib.io.OpinVector ADDR_B 51600 15000 @N 1001 4 1.0E-9 0
+hades.models.gates.InvSmall i1 7800 -16800 @N 1001 5.0E-9
+hades.models.rtlib.io.OpinVector ADDR_A 51600 16200 @N 1001 4 1.0E-9 1
+hades.models.gates.InvSmall i0 -9600 -16800 @N 1001 5.0E-9
+hades.models.gates.And2 AND_eq\u003f_\u005b31\u005d_\u0023t_eq\u003f_\u005b30\u005d_\u0023f1 15000 -15000 @N 1001 1.0E-8
+hades.models.rtlib.io.SelectBit 31_bit_selector 16200 -17400 @N 1001 32 31 1.0E-8
+[end components]
+[signals]
+hades.signals.SignalStdLogicVector n9 32 7 INSTRUCTION Y Arithmetic_Flag_Bit_Selector A Opcode_Selector A LOADHI_Selector A 31_bit_selector A 30_bit_selector A flag_bit_selector A 15 2 7200 -18000 16200 -18000 2 -11400 -18000 -10200 -18000 2 -10200 -18000 -10200 -17400 2 -10200 -18000 -1200 -18000 2 -1200 -18000 -1200 -17400 2 -1200 -18000 7200 -18000 2 7200 -18000 7200 -17400 2 16200 -18000 16200 -17400 2 16200 -18000 24000 -18000 2 24000 -18000 24000 -17400 2 24000 -18000 39000 -18000 2 39000 -18000 39000 -9000 2 -5400 -9000 -11400 -9000 2 39000 -9000 -5400 -9000 2 -5400 -9000 -5400 -8400 6 24000 -18000 -10200 -18000 7200 -18000 16200 -18000 -1200 -18000 -5400 -9000 
+hades.signals.SignalStdLogic1164 n8 2 30_bit_selector Y i5 A 5 2 24000 -16800 24000 -16200 2 24000 -16200 25800 -16200 2 25800 -16200 27000 -16200 2 27000 -16200 27000 -16800 2 27000 -16800 28200 -16800 0 
+hades.signals.SignalStdLogic1164 n1_1_1_0 4 Arithmetic_Flag_Bit_Selector Y i0 A eq?_[31]_#t A i6 A 9 2 -10200 -16200 -10200 -16800 2 -10200 -16200 -9600 -16200 2 -10200 -16200 -10200 -13800 2 -10200 -13800 8400 -13800 2 -10200 -13800 -10200 -8400 2 -10200 -8400 -10200 -7200 2 -10200 -7200 -10200 -6600 2 -10200 -6600 -10200 -6000 2 -10200 -6000 -8400 -6000 2 -10200 -13800 -10200 -16200 
+hades.signals.SignalStdLogic1164 n7 2 31_bit_selector Y i5 B 2 2 16200 -16800 16200 -15600 2 16200 -15600 28200 -15600 0 
+hades.signals.SignalStdLogic1164 n8_0 2 i0 Y Aritmatic_flag_bit_out A 1 2 -7800 -16200 -7200 -16200 0 
+hades.signals.SignalStdLogic1164 n6 2 AND_eq?_[31]_#t_eq?_[30]_#f1 Y LOADHI_flag_out A 1 2 18600 -13800 19200 -13800 0 
+hades.signals.SignalStdLogic1164 n5 2 i1 Y i2 A 1 2 9600 -16200 10200 -16200 0 
+hades.signals.SignalStdLogic1164 n4 3 i3 VCC i2 B eq?_[31]_#t B 9 2 -12000 -10200 -10800 -10200 2 -10800 -10200 -10800 -12600 2 -10800 -12600 -7200 -12600 2 -12000 -10200 -12600 -10200 2 -12600 -10200 -12600 -10800 2 -10800 -12600 -10800 -15000 2 -10800 -15000 7800 -15000 2 7800 -15000 10200 -15000 2 -7200 -12600 8400 -12600 1 -10800 -12600 
+hades.signals.SignalStdLogic1164 n3 2 LOADHI_Selector Y i1 A 2 2 7200 -16800 7200 -16200 2 7200 -16200 7800 -16200 0 
+hades.signals.SignalStdLogic1164 n2 2 eq?_[31]_#t Y AND_eq?_[31]_#t_eq?_[30]_#f1 B 1 2 12000 -13200 15000 -13200 0 
+hades.signals.SignalStdLogic1164 n1 2 i2 Y AND_eq?_[31]_#t_eq?_[30]_#f1 A 4 2 13800 -15600 14400 -15600 2 14400 -15600 14400 -15000 2 14400 -15000 14400 -14400 2 14400 -14400 15000 -14400 0 
+hades.signals.SignalStdLogic1164 n13 2 should_set_flag_bit_be_set? Y set_flag_bit A 1 2 -600 -6600 1800 -6600 0 
+hades.signals.SignalStdLogicVector n0 3 2 Opcode_Selector Y OPCODE A 2 2 -1200 -16800 -1200 -16200 2 -1200 -16200 -600 -16200 0 
+hades.signals.SignalStdLogic1164 n12 2 i6 Y should_set_flag_bit_be_set? B 1 2 -6600 -6000 -4200 -6000 0 
+hades.signals.SignalStdLogic1164 n11 2 flag_bit_selector Y should_set_flag_bit_be_set? A 2 2 -5400 -7800 -5400 -7200 2 -5400 -7200 -4200 -7200 0 
+hades.signals.SignalStdLogic1164 n10 2 i5 Y CONTROL_flag_out A 1 2 31800 -16200 33000 -16200 0 
+[end signals]
+[end]
