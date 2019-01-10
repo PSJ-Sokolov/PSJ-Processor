@@ -15,7 +15,7 @@ hades.models.rtlib.arith.TwosComplement i6 42000 3300 @N 1001 32 111111111111111
 hades.models.rtlib.io.IpinVector B 4800 600 @N 1001 32 00000000000000000000000000001100_B 1.0E-9 0
 hades.models.gates.Mux41 i16 43500 16800 @N 1001 1.5E-8
 hades.models.rtlib.arith.Addc i5 34500 3300 @N 1001 32 00000000000000000000000000011000_B 1.0E-8
-hades.models.Design OPCODE_RESULT_SELECTOR 46800 10200 @N 1001 /home/psj/Uni/Pr/HADES/PSJ-Processor/RESULT-SELECTOR-PSJ.hds
+hades.models.Design OPCODE_RESULT_SELECTOR 46800 10200 @N 1001 ./RESULT-SELECTOR-PSJ.hds
 hades.models.rtlib.io.IpinVector A 4800 2400 @N 1001 32 00000000000000000000000000001100_B 1.0E-9 0
 hades.models.gates.Xor2 i15 31200 17400 @N 1001 1.0E-8
 hades.models.rtlib.arith.Addc i4 40200 6000 @N 1001 32 00000000000000000000000000000000_B 1.0E-8
@@ -28,7 +28,7 @@ hades.models.rtlib.arith.TwosComplement i12 22800 3300 @N 1001 32 11111111111111
 hades.models.rtlib.logic.Nor i11 54000 15600 @N 1001 32 1 1.0E-8
 hades.models.rtlib.logic.BitwiseOr i0 4200 3300 @N 1001 32 00000000000000000000000000001100_B 1.0E-8
 hades.models.rtlib.logic.BitwiseAnd i10 22200 8400 @N 1001 32 00000000000000000000000000000000_B 1.0E-8
-hades.models.Design ROLLER 28800 3300 @N 1001 /home/psj/Uni/Pr/HADES/PSJ-Processor/PSJ-ROLLLER.hds
+hades.models.Design ROLLER 28800 3300 @N 1001 ./PSJ-ROLLLER.hds
 hades.models.rtlib.io.IpinVector opcode 42000 15600 @N 1001 3 001_B 1.0E-9 0
 hades.models.io.Opin ZERO 56400 18000 @N 1001 5.0E-9
 hades.models.rtlib.io.OpinVector RESULT 60600 12600 @N 1001 32 1.0E-9 0

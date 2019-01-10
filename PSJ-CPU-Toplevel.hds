@@ -3,14 +3,14 @@
 [name] RUN1819_CPU
 [components]
 hades.models.rtlib.io.OpinVector ADDRESSBUS 27300 6600 @N 1001 32 1.0E-9 1
-hades.models.Design Decoder1 5700 -6600 @N 1001 E:/Downloads/PSJ-Processor-master/PSJ-Processor-master/Decoder.hds
+hades.models.Design Decoder1 5700 -6600 @N 1001 ./Decoder.hds
 hades.models.io.Opin HALTED 27300 11700 @N 1001 5.0E-9
 hades.models.io.Ipin nRESET_IN -6600 2400 @N 1001 null U
 hades.models.Design timer -1200 -600 @N 1001 ./timer.hds
 hades.models.io.Opin nREAD_ENABLE_OUT 27300 10500 @N 1001 5.0E-9
 hades.models.io.ClockGen i7 -9000 -2400 @N 1001 1.0 0.5 0.0 null
 hades.models.io.Ipin CLOCK -6600 1200 @N 1001 null U
-hades.models.Design flgregbank 26700 -3600 @N 1001 E:/Downloads/PSJ-Processor-master/PSJ-Processor-master/flgbank.hds
+hades.models.Design flgregbank 26700 -3600 @N 1001 ./flgbank.hds
 hades.models.rtlib.logic.N1And i6 22200 4200 @N 1001 32 00000000000000000000000000000000_B 1.0E-8
 hades.models.rtlib.muxes.Mux21 i5 16500 -7500 @N 1001 32 UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU_B 1.0E-8
 hades.models.rtlib.muxes.Mux21 i4 12000 -6600 @N 1001 32 UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU_B 1.0E-8
@@ -22,7 +22,7 @@ hades.models.rtlib.logic.N1And i1 -1500 -4800 @N 1001 32 11111111111111111111111
 hades.models.rtlib.logic.N1And i0 -1500 -4800 @N 1001 16 UUUUUUUUUUUUUUUU_B 1.0E-8
 hades.models.Design tester1 32400 -4200 @N 1001 ./PSJ-tester.hds
 hades.models.rtlib.io.IpinVector DATABUS_IN -3000 -6000 @N 1001 32 11111111111111111111111111111111_B 1.0E-9 1
-hades.models.Design PSJ-ALU 20100 -3600 @N 1001 E:/Downloads/PSJ-Processor-master/PSJ-Processor-master/PSJ-ALU.hds
+hades.models.Design PSJ-ALU 20100 -3600 @N 1001 ./PSJ-ALU.hds
 hades.models.io.Opin nWRITE_ENABLE_OUT 27300 9300 @N 1001 5.0E-9
 [end components]
 [signals]

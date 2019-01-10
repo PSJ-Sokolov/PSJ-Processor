@@ -8,8 +8,8 @@ hades.symbols.PortLabel 4650 1350 3 NEGATIVE_OUT
 hades.symbols.PortSymbol 4800 1200 NEGATIVE_OUT
 hades.symbols.PortLabel 4650 750 3 OVERFLOW_OUT
 hades.symbols.PortSymbol 4800 600 OVERFLOW_OUT
-hades.symbols.PortLabel 150 3750 nRESET_BIT_IN
-hades.symbols.PortSymbol 0 3600 nRESET_BIT_IN
+hades.symbols.PortLabel 150 3750 nRESET
+hades.symbols.PortSymbol 0 3600 nRESET
 hades.symbols.PortLabel 150 3150 CLOCK
 hades.symbols.PortSymbol 0 3000 CLOCK
 hades.symbols.PortLabel 150 2550 ZERO_IN

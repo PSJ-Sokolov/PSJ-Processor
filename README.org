@@ -1,0 +1,23 @@
+#+TITLE: RUN19-18PC
+#+AUTHORS: Niek Hasselerharm (s1026769 TA: Ciscke Harschema) & Philip Sokolov (s4690079 TA: Stefan Bonenschranser)
+* Unimplemented functionality / Bugs in our implementation:
+Our Implementation of the RU18-19 CPU, doesn't have a correctly functioning
+Instruction Decoder (ID), But every other component should be functioning
+correctly (according to our tests) because of the malfunctioning ID, our
+processor's Datapath doesn't work. Resulting in its inability to correctly
+Decode and thereupon execute assembly instructions from the specification.
+* Design choices:
+We think that the main problems we had during the development of this CPU are in
+our process and how we did communicate. And that although we broke ground before
+Christmas the better part of the process was done way to late. These problems
+stem from the fact that we did not have a correct dataflow (which we should have
+had in week 4) because, we weren't partnered until week 7.
+* Function that work
+As hereaforementioned every subcomponent should work:
+- The ALU should work and respond correctly to data and Opcodes, delivering the
+  right results and setting the right flags.
+- The flagregisterbank should keep state of the flags and reset them when nReset is triggered.
+- The tester tests the appropriate flags correctly and does only so when said to.
+- The ID (although we do not know for sure) seems to work and deliver the right data to the appropriate I/O.
+
+We do not have an example program to run on this CPU.
